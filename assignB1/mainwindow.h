@@ -12,7 +12,7 @@ class MainWindow : public QMainWindow
     Q_OBJECT
 
 public:
-    MainWindow(QWidget *parent = nullptr);
+    MainWindow(QWidget *parent = 0);
     ~MainWindow();
 
 private slots:
@@ -26,6 +26,9 @@ private slots:
 
     void on_pushButton_5_clicked();
 
+    void BresenhamLine(int x1,int y1, int x2, int y2,int choice);
+
+    void DDALine(int x1,int y1, int x2, int y2,int choice);
 private:
     Ui::MainWindow *ui;
 };

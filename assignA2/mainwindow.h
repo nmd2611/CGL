@@ -20,6 +20,12 @@ private slots:
 
     void on_pushButton_clicked();
 
+    void printCircle(int xc, int yc, int x, int y);
+
+    void BresenhamCircle(int x,int y,int r);
+
+    void BresenhamLine(int x1,int y1, int x2, int y2);
+
 private:
     Ui::MainWindow *ui;
 };

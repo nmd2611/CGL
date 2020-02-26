@@ -203,7 +203,6 @@ void MainWindow::on_pushButton_3_clicked()
 void MainWindow::on_pushButton_4_clicked()
 {
     // dashed dot
-
     int x1= ui->textEdit->toPlainText().toInt();
     int y1 =ui->textEdit_2->toPlainText().toInt();
 
@@ -228,19 +227,29 @@ void MainWindow::on_pushButton_5_clicked()
 
     int width=ui->textEdit_5 ->toPlainText().toInt();
     int choice=4;
-    width/=2;
+   // width/=2;
     int nx,ny;
     int vx,vy;
 
     nx=x1;
     ny=y1;
-
+    float slope=10000;
+    if(x2 != x1)
+    slope=(y2-y1)/(x2-x1);
+    slope=abs(slope);
     vx=x2;
     vy=y2;
     while(width--)
     {
+        if(slope>=0 && slope<=1)
+            BresenhamLine(nx,ny++,vx,vy++,choice);
+        else if(x2 == x1 || slope>1)
+            BresenhamLine(nx++,ny,vx++,vy,choice);
+        else
+        {
          BresenhamLine(nx--,ny--,vx--,vy--,choice);
          BresenhamLine(x1++,y1++,x2++,y2++,choice);
+        }
     }
 
 

@@ -1,0 +1,7 @@
+Command to complile opengl Program:
+
+boatanimation.c -lGL -lGLU -lglut -o  boatanimation
+./boatanimation
+
+
+#2464

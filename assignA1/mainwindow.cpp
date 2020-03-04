@@ -80,7 +80,7 @@ void BresenhamLine(int x1,int y1, int x2, int y2)
 void DDALine(int x1,int y1, int x2, int y2)
 {
     float x,y;
-    int dx,dy;
+    float dx,dy;
 
     dx=x2-x1;     // Calculating dx
     dy=y2-y1;     // Calculating dy
@@ -122,3 +122,4 @@ void MainWindow::on_pushButton_clicked()
     ui->label_3->setPixmap(QPixmap::fromImage(image));
     ui->label_3->show();
 }
+

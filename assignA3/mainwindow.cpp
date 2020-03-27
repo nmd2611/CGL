@@ -78,6 +78,7 @@ void MainWindow::on_pushButton_clicked()
 {
 
     // TRANSLATION
+    cnt=0;
     int tx,ty;
     tx= ui->textEdit->toPlainText().toInt();
     ty= ui->textEdit_2->toPlainText().toInt();
@@ -229,6 +230,7 @@ void MainWindow::scalePoints(int x[],int y[], float sx, float sy)
 
 void MainWindow::on_pushButton_2_clicked()
 {
+    cnt=0;
     int angle= ui->textEdit_3->toPlainText().toInt();
 
     float a = angle * 3.142 / 180;
